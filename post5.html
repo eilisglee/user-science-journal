@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163410299-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163410299-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>User Science Journal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Eilis Lee</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="post1.html">#ColorOurCollections</a>
+              <a class="dropdown-item" href="post2.html">The Story of Stuff Project</a>
+              <a class="dropdown-item" href="post3.html">Postable (Desktop)</a>
+              <a class="dropdown-item" href="post4.html">Postable (Mobile)</a>
+              <a class="dropdown-item" href="post5.html">beautyblender</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/purple-black-and-pink-makeup-blenders-1502645.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Web Accessibility Review on beautyblender.com</h1>
+            <!-- <h2 class="subheading">Postable.com
+            </h2> -->
+            <span class="meta">Posted by
+              <a href="#">Eilis Lee</a>
+              on May 10, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <!-- Introduction -->
+          <p>The practice of Web accessibility helps to lift barriers that might prevent people with physical or
+            situational disabilities from interacting with or accessing a website. Federal agencies and the companies
+            that do business with them are required under Section 508 of the
+            Rehabilitation Act of 1973 <a
+              href="https://www.govinfo.gov/content/pkg/USCODE-2011-title29/html/USCODE-2011-title29-chap16-subchapV-sec794d.htm">(29
+              U.S.C § 794 (d))</a> to make their electronic and information technology (EIT) accessible to people with
+            disabilities.</p>
+          <p>While this requirement doesn't currently apply to all organizations, web accessibility should
+            be considered in a variety of build processes. The web is an important resource in many aspects of our lives and
+            regardless of our abilities or limitations, everyone should have equal access to these resources.</p>
+          <p>We'll touch on a few accessibility guidelines today as we analyze the beautyblender&reg; site, <a
+              href="https://www.beautyblender.com/">beautyblender.com</a>, using the <a
+              href="https://wave.webaim.org/">WAVE Web
+              Accessibility
+              Evaluation</a> tool.</p>
+          <a href="#">
+            <img class="img-fluid" src="img/beautyblender-home.jpg" alt="">
+          </a>
+          <span class="caption text-muted">beautyblender&reg; Homepage</span>
+          <p>beautyblender&reg; is well known for its iconic makeup sponge, a tool applauded by many
+            for it's effortless
+            blending.</p>
+          <a href="#">
+            <img class="img-fluid" src="img/beautyblender-original.jpg" alt="beautyblender original makeup sponge">
+          </a>
+          <span class="caption text-muted">beautyblender&reg; original makeup sponge</span>
+
+          <!-- Background about Evaluation -->
+          <h2 class="section-heading">Background about Evaluation</h2>
+          <p>The Web Content Accessibility Guidelines, also known as <a
+              href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>, explains how to make Web
+            content accessible to people with disabilities. At a glance, this includes ensuring that a website is
+            Perceivable, Operable, Understandable, and Robust (POUR).</p>
+          <h3 id="perceivable">Perceivable</h3>
+          <ul>
+            <li>Provide text alternatives for non-text content.</li>
+            <li>Provide captions and other alternatives for multimedia.</li>
+            <li>Create content that can be presented in different ways, including by assistive technologies, without
+              losing meaning.</li>
+            <li>Make it easier for users to see and hear content.</li>
+          </ul>
+          <h3 id="operable">Operable</h3>
+          <ul>
+            <li>Make all functionality available from a keyboard.</li>
+            <li>Give users enough time to read and use content.</li>
+            <li>Do not use content that causes seizures or physical reactions.</li>
+            <li>Help users navigate and find content.</li>
+            <li>Make it easier to use inputs other than keyboard.</li>
+          </ul>
+          <h3 id="understandable">Understandable</h3>
+          <ul>
+            <li>Make text readable and understandable.</li>
+            <li>Make content appear and operate in predictable ways.</li>
+            <li>Help users avoid and correct mistakes.</li>
+          </ul>
+          <h3 id="robust">Robust</h3>
+          <ul>
+            <li>Maximize compatibility with current and future user tools.</li>
+          </ul>
+
+          <!-- Results and Recommended Actions -->
+          <h2 class="section-heading">Results and Recommended Actions</h2>
+          <p>WAVE's online evaluation tool can help developers make their web content more accessible to people with
+            disabilities. It can identify many accessibility issues known to impact users and it can also identify WCAG
+            errors.
+          </p>
+          <a href="#">
+            <img class="img-fluid" src="img/wave-summary.jpg" alt="wave evaluation tool summary">
+          </a>
+          <span class="caption text-muted">WAVE evaluation tool summary</span>
+          <p>The WAVE tool highlights areas on a site that are important in accessibility, organizing the findings into
+            the following categories:</p>
+          <ul>
+            <li>Errors</li>
+            <li>Contrast Errors</li>
+            <li>Alerts</li>
+            <li>Features</li>
+            <li>Structural Elements</li>
+            <li>ARIA</li>
+          </ul>
+          <p>beautyblender&reg;'s evaluation revealed a number errors in the summary tab. A closer look at the details show
+            that many of the errors could impact certain users with disabilities. The errors in red indicate
+            accessibility issues and failure to meet WCAG guidelines.</p>
+          <div class="row">
+            <div class="col-md">
+              <a href="#">
+                <img class="img-fluid" src="img/wave-summary-report.jpg" alt="wave evaluation tool summary">
+              </a>
+              <span class="caption text-muted">WAVE evaluation summary on the beautyblender site</span></div>
+            <div class="col-md">
+              <a href="#">
+                <img class="img-fluid" src="img/wave-details-report.jpg" alt="wave evaluation tool details">
+              </a>
+              <span class="caption text-muted">WAVE evaluation details on beautyblender.com</span>
+            </div>
+          </div>
+          <p>beautyblender&reg; failed to meet a number of the POUR guidelines listed by the WCAG.</p>
+
+          <h4><a href="#perceivable">Perceivable</a></h4>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thread>
+              <tr>
+                <th>Findings</th>
+                <th>Recommendations</th>
+              </tr>
+            </thread>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Missing alternative text</li>
+                    <li>Missing form label</li>
+                    <li>Empty button</li>
+                    <li>Broken ARIA reference</li>
+                    <li>Contrast errors</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Add an alt attribute to image</li>
+                    <li>Properly label form control</li>
+                    <li>Add missing attribute to button</li>
+                    <li>Properly reference ARIA targets</li>
+                    <li>Increase contrast between foreground and background colors</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <h4><a href="#operable">Operable</a></h4>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thread>
+              <tr>
+                <th>Findings</th>
+                <th>Recommendations</th>
+              </tr>
+            </thread>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Missing form label</li>
+                    <li>Empty button</li>
+                    <li>Empty link</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Properly label form control</li>
+                    <li>Add missing attribute to button</li>
+                    <li>Properly anchor element</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <h4><a href="#understandable">Understandable</a></h4>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thread>
+              <tr>
+                <th>Findings</th>
+                <th>Recommendations</th>
+              </tr>
+            </thread>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Missing form label</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Properly label form control</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <h4><a href="#robust">Robust</a></h4>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thread>
+              <tr>
+                <th>Findings</th>
+                <th>Recommendations</th>
+              </tr>
+            </thread>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Broken ARIA reference</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Properly reference ARIA targets</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Key Takeaways -->
+          <h2 class="section-heading">Key Takeaways</h2>
+          <p>Overall, many of the beautyblender errors identified in the WAVE evaluation are issues that could be easily
+            resolved. The goal should be to give all users the best experience possible regardless of limitations or
+            disabilities and in some cases, just a few small changes could make all the difference.</p>
+
+
+          <p>Images from
+            <a href="https://www.beautyblender.com/">beautyblender.com</a> and by Ray Piedra from Pexels.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </article>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://github.com/eilisglee">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Eilis Lee 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
