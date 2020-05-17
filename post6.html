@@ -70,15 +70,14 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/purple-black-and-pink-makeup-blenders-1502645.jpg')">
+  <header class="masthead" style="background-image: url('img/brainstorming.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>Web Accessibility in Progress</h1>
-            <!-- <h2 class="subheading">Postable.com
-            </h2> -->
+            <h2 class="subheading">Self Assessment</h2>
             <span class="meta">Posted by
               <a href="#">Eilis Lee</a>
               on May 17, 2020</span>
@@ -94,27 +93,250 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <!-- Summary report -->
-          <p>So I have to admit that my last post may have been a bit overly optimistic in describing how easy web
-            accessibility can be sometimes. I'm working on making my own site as accessible as possible and am pouring
-            myself into it. Today's post will describe some of my successes and failures in web accessibility so far.
+          <p>Today's post will describe some of the successes and failures faced while implementing accessibility on
+            my own site. There were a number of issues that came up during the initial assessment and although I won't
+            cover all of them today, I will go over a few of them.
           </p>
 
-          <p>The tools used to analyze accessibilty in my site include WebAim's WAVE evaluation tool and the Lighthouse
-            Report.</p>
-          <!-- Describe process of analyzing problems and implementing fixes -->
+          <p>Full disclosure: Bootstrap was used as the framework for this blog so a
+            lot of the accessibility issues are due to my own inexperience and ignorance. More to follow on this.</p>
 
+          <p>The tools used to analyze accessibilty on this site include the Lighthouse
+            Report and WebAim's WAVE evaluation tool .</p>
+
+          <!-- Lighthouse Evaluation -->
+          <h2 class="section-heading">The Evaluations</h2>
+          <p>Here's a little about the assessment:</p>
+          <h3><a>Lighthouse Findings</a></h3>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thead>
+              <tr>
+                <th>Error</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Contrast</td>
+                <td>Background and foreground colors do not have a sufficient contrast ratio</td>
+              </tr>
+              <tr>
+                <td>Names and Labels</td>
+                <td>Links do not have a discernible name</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- WAVE Evaluation -->
+          <p>Quick overview of assessment.</p>
+          <h3><a>WAVE Findings</a></h3>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thead>
+              <tr>
+                <th>Error</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linked image missing alternative text</td>
+                <td>An image without alternative text results in an empty link</td>
+              </tr>
+              <tr>
+                <td>Empty link</td>
+                <td>A link contains no text</td>
+              </tr>
+              <tr>
+                <td>Very Low Contrast</td>
+                <td>Very low contrast between foreground and background colors</td>
+              </tr>
+              <tr>
+                <td>Link to PDF document</td>
+                <td>A link to a PDF document is present</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <hr>
+
+          <!-- Implementing Fixes -->
+          <h2 class="section-heading">Implementing Fixes</h2>
+          <p>I'll focus today's post on the following items which should help to move the site in the right direction.
+          </p>
+          <ol>
+            <li>Missing alternative text</li>
+            <li>Empty links</li>
+            <li>Contrast error</li>
+            <li>PDF document warning</li>
+          </ol>
+          <br>
+          <!-- Alternative Text Errors -->
+          <h3>1. Alternative Text</h3>
+          <p>Images that are the only thing within a link must have descriptive alternative text.</p>
+
+          <h4>Guideline 1.1.1</h4>
+          <h5>Text Alternatives: Provide text alternatives for any non-text content</h5>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thead>
+              <tr>
+                <th>Success Criteria</th>
+                <th>WebAIM's Recommendations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.w3.org/TR/WCAG21/#non-text-content/">1.1.1 Non-text content</a></td>
+                <td>
+                  <ul>
+                    <li>Images, form image buttons, and image map hot spots have appropriate, equivalent alternative
+                      text.</li>
+                    <li>Images that do not convey content, are decorative, or contain content that is already conveyed
+                      in text are given null alt text (alt="") or implemented as CSS backgrounds. All linked images have
+                      descriptive alternative text. <br><br>
+                      (See <a href="https://webaim.org/standards/wcag/checklist#sc1.1.1/">1.1.1 Non-text content</a> for
+                      full description of guideline)
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This is one thing I failed at big time. I would say 90% of the images on the site did not include a text
+            alternative. Based on WebAIM's recommendations, I went through and updated all the images to include an
+            appropriate and descriptive alt text.</p>
+          <a>
+            <img class="img-fluid" src="img/code-img-alt-text.png"
+              alt="img tag of original code which is missing alternative text">
+          </a>
+          <span class="caption text-muted">Image code missing alternative text</span>
+          <p>What was originally left blank with most images:</p>
+          <code>alt=""</code>
+          <p>was updated to something more like:</p>
+          <code>alt="original code missing appropriate alternative text"</code>
+          <p>I can have trouble finding the right words sometimes but this is definitely worth the extra bit of effort.
+          </p>
+
+          <!-- Empty Link Errors -->
+          <h3>2. Empty Links</h3>
+          <p>Empty Links can cause confusion when the purpose of the link is unclear.</p>
+          <h4>Guideline 2.4</h4>
+          <h5>Navigable: Provide ways to help users navigate, find content, and determine where they are.</h5>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thead>
+              <tr>
+                <th>Success Criteria</th>
+                <th>WebAIM's Recommendations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.w3.org/TR/WCAG21/#link-purpose-in-context/">2.4.4 Link Purpose</a></td>
+                <td>
+                  <ul>
+                    <li>The purpose of each link (or form image button or image map hotspot) can be determined from the
+                      link text alone, or from the link text and its context (e.g., surrounding text, list item,
+                      previous heading, or table headers).</li>
+                    <li>Links (or form image buttons) with the same text that go to different locations are readily
+                      distinguishable.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Both the Lighthouse and WAVE reports pointed out the missing text from the social link in the footer. For
+            readability, I got left off a few lines of code:</p>
+
+          <code>
+            &lt;a href=&quot;https://github.com/eilisglee&quot;&gt; 
+              &lt;/a&gt;
+          </code>
+
+          <p>It can be argued that the link itself describes its context but I went ahead and updated the empty link to
+            include a description of its purpose anyway.</p>
+
+          <code>
+            &lt;a href=&quot;https://github.com/eilisglee&quot;&gt; 
+            Eilis' GitHub Portfolio 
+              &lt;/a&gt;
+          </code>
+          <p>I may do a little more research on the subject though as I'm not sure how I feel about it aesthetically.
+          </p>
+
+          <!-- Contrast Errors -->
+          <h3>3. Contrast Errors</h3>
+          <p>Adequate contrast is necessary for all users, especially users with low vision.</p>
+          <h4>Guideline 1.4</h4>
+          <h5>Distinguishable: Make it easier for users to see and hear content including separating foreground from
+            background</h5>
+          <table style="width:100%">
+            <col style="width:50%">
+            <thead>
+              <tr>
+                <th>Success Criteria</th>
+                <th>WebAIM's Recommendations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum/">1.4.3 Contrast (Minimum)</a></td>
+                <td>
+                  <ul>
+                    <li>Text and images of text have a contrast ratio of at least 4.5:1.</li>
+                    <li>Large text - at least 18 point (typically 24px) or 14 point (typically 18.66px) and bold - has a
+                      contrast ratio of at least 3:1.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>When I think about contrast, I tend to think in terms of color so I was a surprised to learn that contrast
+            can also be determined by the size of the text as well as the boldness of it. The algorithim in determining
+            color contrast includes checking that all text elements have contrast between the foreground text and the
+            background colors to meet the contrast ratio minimums. This rule, however, does not report on text elements
+            that have a <code>background-image</code>, obscured by other elements or images of text.</p>
+
+          <p>Both the Lighthouse and WAVE reports flagged a number of elements in the navigation bar as having low
+            contrast ratio... yes, that very same navigation bar with the background image and overlay.</p>
+
+          <p>The Bootstrap design used for this site came with many pre-built and styled elements, which helped to get
+            this blog up and running a lot faster than it would have without. But, being the amateur that I am, it's taking a little more time to analyze the contrast issues here. I'll update once I figure it out.</p>
+
+          <!-- PDF Warning -->
+          <h3>4. Link to PDF document</h3>
+          <p>Unlike the other errors in this assessment, <i>"Link to PDF document"</i> was listed as an
+            alert and does not currently have standards under <a href="https://www.w3.org/TR/WCAG20/">WebAIM's WCAG 2.0
+              guidelines</a>. WebAIM does offer recommendations in <a href="https://webaim.org/techniques/acrobat/">PDF
+              Accessibility</a> though and according to the WAVE report summary, unless authored with accessibility in
+            mind, PDF documents usually have accessibility issues. PDF
+            documents can also require additional software to view, which can be diffult for some people to access.</p>
+
+          <p>WebAIM recommends that PDF documents be natively accessible or as an alternative, HTML content should be
+            used in its place. In my previous posts on Usability, I included PDF download links of the test scripts I
+            used:</p>
+
+          <code>href="design/postable-mobile-test-script.pdf"</code>
+          <p>With WebAIM's recommendations in mind, the PDF documents I had up were both taken down and replaced with
+            HTML content instead:</p>
+          <code>href="design/postable-mobile-test-script.html"</code>
+          <p>This was a quick and easy change which pretty much just involved saving the original documents to a
+            different format.</p>
+          <hr>
 
           <!-- Challenges faced, surprises -->
-
-
-          <!-- Problems that couldn't be fixed -->
-
+          <h2 class="section-heading">Challenges</h2>
+          <p>When I first started scanning the accessibility reports, I wasn't quite sure how I was going to tackle the
+            contrast errors as I couldn't <i>see</i> any. </p>
 
           <!-- Bootstrap framework helpful or harmful? -->
+          <h2 class="section-heading">Bootstrap helpful?</h2>
+          <p>Let's talk Bootstrap</p>
 
-          <p>Images from
-            <a href=""></a> and by Ray Piedra from Pexels.</p>
-          <br>
         </div>
       </div>
     </div>
@@ -128,7 +350,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="https://github.com/eilisglee">
+              <a href="https://github.com/eilisglee">Eilis' GitHub Portfolio
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-github fa-stack-1x fa-inverse"></i>
