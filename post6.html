@@ -95,7 +95,7 @@
           <!-- Summary report -->
           <p>Today's post will describe some of the successes and failures faced while implementing accessibility on
             my own site. There were a number of issues that came up during the initial assessment and although I won't
-            cover all of them today, I will go over a few of them.
+            cover all of them in this post, I will go over a few of them.
           </p>
 
           <p>Full disclosure: Bootstrap was used as the framework for this blog so a
@@ -298,14 +298,43 @@
           <p>When I think about contrast, I tend to think in terms of color so I was a surprised to learn that contrast
             can also be determined by the size of the text as well as the boldness of it. The algorithim in determining
             color contrast includes checking that all text elements have contrast between the foreground text and the
-            background colors to meet the contrast ratio minimums. This rule, however, does not report on text elements
-            that have a <code>background-image</code>, obscured by other elements or images of text.</p>
+            background colors to meet the contrast ratio minimums. A number of accessibility analysis tools,
+            however, do not report on text elements
+            that have a <code>background-image</code> or are obscured by other elements or images of text. This would
+            need to be calculated manually.</p>
+
+          <p>The Bootstrap design used for this site came with a set of base styles and functionality, which helped to
+            kick-start this blog a lot faster than it would have without. With the base styles, the heading overlay and
+            text colors were already in place. </p>
 
           <p>Both the Lighthouse and WAVE reports flagged a number of elements in the navigation bar as having low
-            contrast ratio... yes, that very same navigation bar with the background image and overlay.</p>
+            contrast ratio but were unable to provide accurate readings due to the background image and overlay. A quick
+            look at the css and I was able to find the colors needed to
+            evaluate contrast. </p>
 
-          <p>The Bootstrap design used for this site came with many pre-built and styled elements, which helped to get
-            this blog up and running a lot faster than it would have without. But, being the amateur that I am, it's taking a little more time to analyze the contrast issues here. I'll update once I figure it out.</p>
+          <a>
+            <img class="img-fluid" src="img/code-css-heading-overlay.png"
+              alt="css code showing heading overlay background-color #212529">
+          </a>
+          <span class="caption text-muted">Heading overlay background-color #212529</span>
+
+          <a>
+            <img class="img-fluid" src="img/code-css-heading-color.png" alt="css code of heading text color #fff">
+          </a>
+          <span class="caption text-muted">Heading text color #fff</span>
+
+          <p>Since the Lighthouse and WAVE reports weren't able to fully evaluate the header contrast (and my math
+            skills are a little rusty), <a
+              href="https://contrast-ratio.com/#%23ffffff-on-%23212529">contrast-ratio.com</a> was able to fill the gap
+            by calculating the contrast ratio based on the colors used.</p>
+
+          <a>
+            <img class="img-fluid" src="img/contrast-ratio.jpg"
+              alt="Contrast ratio 15.42 based on background color #212529 and text #fff">
+          </a>
+          <span class="caption text-muted">Contrast ratio 15.42 based on background color #212529 and text #fff</span>
+
+          <p></p>
 
           <!-- PDF Warning -->
           <h3>4. Link to PDF document</h3>
@@ -314,7 +343,8 @@
               guidelines</a>. WebAIM does offer recommendations in <a href="https://webaim.org/techniques/acrobat/">PDF
               Accessibility</a> though and according to the WAVE report summary, unless authored with accessibility in
             mind, PDF documents usually have accessibility issues. PDF
-            documents can also require additional software to view, which can be diffult for some people to access.</p>
+            documents can also require additional software to view, which can be difficult for some people to access.
+          </p>
 
           <p>WebAIM recommends that PDF documents be natively accessible or as an alternative, HTML content should be
             used in its place. In my previous posts on Usability, I included PDF download links of the test scripts I
@@ -330,12 +360,11 @@
 
           <!-- Challenges faced, surprises -->
           <h2 class="section-heading">Challenges</h2>
-          <p>When I first started scanning the accessibility reports, I wasn't quite sure how I was going to tackle the
-            contrast errors as I couldn't <i>see</i> any. </p>
+          <p>When I first started scanning the accessibility reports, I wasn't quite sure how I was going to tackle the contrast errors because I couldn't see any. It's been a really enlightnening experience so far and I think it'll be something that will continue to challenge me.</p>
 
           <!-- Bootstrap framework helpful or harmful? -->
-          <h2 class="section-heading">Bootstrap helpful?</h2>
-          <p>Let's talk Bootstrap</p>
+          <h2 class="section-heading">Thoughts on Accessibility with Bootstrap</h2>
+          <p>Overall, I think Bootstrap is great when it comes to accessibility. The framework is tried and tested but it's ultimately up to the developer to ensure that their websites are fully accessible. There are a number of tools we can use to help us make the right decisions and Bootstrap is just one of them.</p>
 
         </div>
       </div>
