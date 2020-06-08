@@ -79,11 +79,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Google Analytics</h1>
-            <h2 class="subheading">Adding Google Analytics</h2>
+            <h1>A/B Testing</h1>
+            <h2 class="subheading">Content Experiment with Google Optimize</h2>
             <span class="meta">Posted by
               <a href="#">Eilis Lee</a>
-              on May 24, 2020</span>
+              on June 7, 2020</span>
           </div>
         </div>
       </div>
@@ -96,122 +96,101 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <!-- Intro -->
-          <p><a href="https://analytics.google.com/">Google Analytics</a> is a powerful web analytics tool that tracks
-            and reports on website traffic. Using digital analytics can help people and businesses collect and analyze
-            data about their websites to make decisions that are most effective in their efforts.</p>
+          <p>Google Optimize offers tools for site personalization and testing solutions. It's built on top of Google
+            Analytics and allows you to test a hypotheses for site changes without the need to publish any real
+            development changes.
+          </p>
 
-          <p>I chose to add Google Analytics tracking to this User Science Journal and have been collecting data since
-            it kicked off not long ago. I don't anticipate this site receiving many visitors but it
-            will be an interesting learning experience, nonetheless.</p>
+          <p>Google Optimize has a number of testing options but for this experiment, A/B Testing was set up to test
+            between two versions of this site's homepage: the original and the variant.</p>
 
-          <!-- Setting up Google Analytics -->
-          <h2 class="section-heading">Setting Up Google Analytics</h2>
-          <p>To set up Google Analytics, I created an account on the <a
-              href="https://marketingplatform.google.com/about/analytics/">Google Analytics Marketing Platform</a> and
-            filled out account details about this site. Google Analytics uses Javascript code added to website pages
-            to collect and send data to Google Analytics. The tracking code for this site was added to the
-            <code>head</code> tag in each page of the User Science Journal.</p>
+          <!-- Goals and Events -->
+          <h2 class="section-heading">Content Changes</h2>
+          <h3>Targeting and Variant</h3>
+          <p>Creating an Experience with Google Optimize includes three steps:</p>
 
-          <a>
-            <img class="img-fluid" src="img/google-tracking-id.jpg"
-              alt="screenshot of Google Analytics tracking code, Global Site Tag (gtag.js)">
-          </a>
-          <span class="caption text-muted">Google Analytics Tracking Code</span>
+          <ol>
+            <li>Make the visual site changes</li>
+            <li>Choose a target audience</li>
+            <li>Set a testing objective</li>
+          </ol>
+          <p>Last week, I set up a click event goal with Google Analytics on the blog post titled <i>Google
+              Analytics</i>. For this week's experiment, my goal was to guide more people to that post by making it
+            stand out more.</p>
 
-          <!-- Expectations? -->
-          <h2 class="section-heading">My Predictions</h2>
-          <p>My goal with Google Analytics is to get a better understanding of how users are engaging with the site and
-            to better understand the dimensions and metrics used for reporting.</p>
+          <p>The A/B test experiment was created with the following information:</p>
 
-          <p>Like I mentioned earlier, I don't expect to see tons of traffic here but it will be interesting to
-            see information about demographics and traffic source. I expect that many of the visitors to this site will
-            be people with an interest in web technology who may find their way here through an organic web search. I'm
-            also expecting to see a majority of the sessions come from a desktop device and be located in the United
-            States.</p>
-
-          <table style="width:75%">
-            <col style="width:50%">
-            <thead>
-              <tr>
-                <th>Analytics Report</th>
-                <th>My Prediction</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Demographics</td>
-                <td>Male, ages 25 - 34</td>
-              </tr>
-              <tr>
-                <td>Interests</td>
-                <td>Web technology</td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>United States</td>
-              </tr>
-              <tr>
-                <td>Acquisition</td>
-                <td>Organic search</td>
-              </tr>
-              <tr>
-                <td>Device</td>
-                <td>Desktop</td>
-              </tr>
-              <tr>
-                <td>Browser</td>
-                <td>Google Chrome</td>
-              </tr>
-            </tbody>
+          <table style="width:100%">
+            <tr>
+              <th>Required Information</th>
+              <th>Changes/Data</th>
+            </tr>
+            <tr>
+              <td>Variant</td>
+              <td>Increase font size</td>
+            </tr>
+            <tr>
+              <td>Target audience</td>
+              <td>Users in the city of Kent</td>
+            </tr>
+            <tr>
+              <td>Test Objective</td>
+              <td>Pageviews</td>
+            </tr>
           </table>
 
-          <!-- Preliminary Findings -->
-          <h2 class="section-heading">Preliminary Findings</h2>
-          <p>After collecting data for a number of weeks, I was disappointed to find that the demographics information
-            on age, gender, and interests was not available. This could be due to settings or because this
-            site drives very low traffic.
-          </p>
-          <p>Aside from the demographics data, the findings for May 1 - May 24 gave a very detailed snapshot of the overall
-            traffic, location, devices, and many other dimensions.
-          </p>
-          <table style="width:75%">
-            <col style="width:50%">
-            <thead>
-              <tr>
-                <th>Analytics Report</th>
-                <th>Preliminary Findings</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Demographics</td>
-                <td>No data available</td>
-              </tr>
-              <tr>
-                <td>Interests</td>
-                <td>No data available</td>
-              </tr>
-              <tr>
-                <td>Location</td>
-                <td>United States</td>
-              </tr>
-              <tr>
-                <td>Acquisition</td>
-                <td>79.2% Direct, 20.8% Social</td>
-              </tr>
-              <tr>
-                <td>Device</td>
-                <td>58.33% Desktop, 41.67% Mobile</td>
-              </tr>
-              <tr>
-                <td>Browser</td>
-                <td>66.67% Google Chrome</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>I'm really interested in seeing the demographics report so I'm looking into it further. I'll update with a solution if I'm able to find one.</p>
-          
+          <p>I increased the size of the font and chose to have this version of the homepage displayed only to users in
+            the
+            city of Kent. The pageviews objective is based on Google Analytics data.</p>
 
+          <div class="row">
+            <div class="col-md">
+              <a>
+                <img class="img-fluid" src="img/google-content-experiment-original.jpg"
+                  alt="screenshot of User Science Journal homepage before content changes">
+              </a>
+              <span class="caption text-muted">Original font size</span></div>
+            <div class="col-md">
+              <a>
+                <img class="img-fluid" src="img/google-content-experiment.jpg"
+                  alt="screenshot of User Science Journal homepage after content changes: increased font size">
+              </a>
+              <span class="caption text-muted">Increased font size</span>
+            </div>
+          </div>
+
+          <p></p>
+
+          <h2 class="section-heading">Findings</h2>
+          <h3>Usability Testing</h3>
+          <p>After setting up the experience, I had a few people from Kent visit my site for an informal usability test.
+          </p>
+
+          <table style="width:100%">
+            <tr>
+              <th>Task</th>
+              <th>Findings</th>
+            </tr>
+            <tr>
+              <td>Find an interesting article to read from the homepage</td>
+              <td>All participants clicked on the targeted <i>Google Analytics</i> post</td>
+            </tr>
+          </table>
+          <p>Given the task of finding an interesting article to read, each of the participants clicked on the Google
+            Analytics blog post, which was surprising to me as my inital thought was that the participants might
+            actually look for an article that they were interested in. Several of them admitted that they chose the
+            Google Analytics post because of it's large font size.
+          </p>
+          <p>I ran the Google Optimize test for a few days but the reporting on the experience did not offer a clear
+            leader in the experiment. I may need more visitors to improve the reporting.</p>
+
+          <h2 class="section-heading">Final Thoughts</h2>
+          <p>I can see the value in Google Optimize's testing tools and found the whole process to be really
+            user-friendly. With that small change in font
+            size, I was able to acheive the goal of guiding more people
+            towards the target
+            post. For the sake of style consistency though, I wouldn't actually make this change to the site. The change
+            would be to the actual content of the title.</p>
         </div>
       </div>
     </div>
